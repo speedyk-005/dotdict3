@@ -53,6 +53,7 @@ A dictionary subclass that allows attribute-style access to keys.
 #### Features
 
 - **Attribute access**: Get, set, and delete keys using dot notation
+- **Empty initialization**: Create empty instances with `DotDict()` (no arguments needed)
 - **Automatic nesting**: Nested dictionaries are automatically converted to `DotDict`
 - **Iterable conversion**: Lists, tuples, sets, and ranges are converted to `DotList`
 - **Dict compatibility**: All standard `dict` methods work as expected
@@ -61,6 +62,10 @@ A dictionary subclass that allows attribute-style access to keys.
 
 ```python
 from dotdict3 import DotDict
+
+# Empty initialization
+empty = DotDict()
+print(len(empty))  # 0
 
 # Basic usage
 user = DotDict({'name': 'Alice', 'role': 'admin'})
@@ -89,6 +94,7 @@ A list subclass that automatically converts nested dictionaries and iterables.
 
 #### Features
 
+- **Empty initialization**: Create empty instances with `DotList()` (no arguments needed)
 - **Automatic conversion**: Dictionaries in the list become `DotDict` instances
 - **Nested iterables**: Lists, tuples, sets, and ranges become `DotList` instances
 - **List compatibility**: All standard `list` methods work as expected
@@ -97,6 +103,10 @@ A list subclass that automatically converts nested dictionaries and iterables.
 
 ```python
 from dotdict3 import DotList
+
+# Empty initialization
+empty = DotList()
+print(len(empty))  # 0
 
 # Basic usage
 items = DotList([1, 2, 3])
