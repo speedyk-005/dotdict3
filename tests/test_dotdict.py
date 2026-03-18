@@ -222,7 +222,7 @@ class TestEdgeCases:
         l.extend([4, 5])
         assert len(l) == 5
         assert l.pop() == 5
-        
+
     @pytest.mark.parametrize("arg", [int, list, set, str, tuple])
     def test_invalid_input(self, arg):
         with pytest.raises(AttributeError):
